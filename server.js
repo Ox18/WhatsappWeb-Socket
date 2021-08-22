@@ -16,9 +16,6 @@ app.get("/hello", function (req, res) {
   res.status(200).send("Hello World!");
 });
 
-let qr_image = '';
-
-
 
 io.on("connection", function (socket) {
   console.log("Alguien se ha conectado con Sockets");
@@ -38,11 +35,20 @@ io.on("connection", function (socket) {
   });
 });
 
+client.on('authenticated', async (session) => {
+  console.log(session);
+    console.log('autenticado');
+});
 
+client.on('message', async msg => {
+  msg.reply('hola');
+})
 
 client.on('ready', () => {
   console.log('Client is ready!');
+  console.log(client.info);
 });
+
 
 client.on('message', msg => {
   if (msg.body == '!ping') {

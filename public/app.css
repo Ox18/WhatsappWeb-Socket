@@ -1,0 +1,14 @@
+#qr_code{
+    background: #e4e4e4;
+    height: 274px;
+    width: 274px;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card-contenedor{
+    display: grid;
+    grid-template-columns: 50% auto;
+}
