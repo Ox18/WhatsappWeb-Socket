@@ -1,14 +1,33 @@
 #qr_code{
-    background: #e4e4e4;
-    height: 274px;
-    width: 274px;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #e4e4e4;
+  height: 274px;
+  width: 274px;
+}
+
+#qr_code img{
+  width: 100%;
 }
 
 .card-contenedor{
     display: grid;
     grid-template-columns: 50% auto;
+}
+
+body{
+  user-select: none;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  background: rgb(228,228,228);
+  background: linear-gradient(0deg, rgba(228,228,228,1) 0%, rgba(238,238,238,1) 52%, rgba(0,191,165,1) 100%) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
