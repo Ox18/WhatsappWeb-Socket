@@ -4,7 +4,7 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 var SocketClient = require('./controller/SocketClient');
 
-SocketClient.buildInstance(io);
+const socketClient = new SocketClient(io);
 
 app.use(express.static("public"));
 
