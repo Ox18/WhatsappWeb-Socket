@@ -50,9 +50,6 @@ class SocketClient{
     onNewMessageIO(data){
         this.io.sockets.emit("messages", this.qrURL || "");
     }
-    
-    
-   
 }
 
 module.exports = SocketClient;
