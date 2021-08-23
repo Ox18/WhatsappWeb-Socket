@@ -6,6 +6,4 @@ var SocketClient = require('./controller/SocketClient');
 const socketClient = new SocketClient(io);
 app.use(express.static("public"));
 
-server.listen(8080, function () {
-  console.log("Servidor corriendo en http://localhost:8080");
-});
+server.listen(8080, ()=> console.log("Servidor corriendo en http://localhost:8080"));
