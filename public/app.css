@@ -1,33 +1,76 @@
-#qr_code{
+#qr_code {
   background: #e4e4e4;
   height: 274px;
   width: 274px;
 }
 
-#qr_code img{
+#qr_code img {
   width: 100%;
 }
 
-.card-contenedor{
-    display: grid;
-    grid-template-columns: 50% auto;
+.card-contenedor {
+  display: grid;
+  grid-template-columns: 50% auto;
 }
 
-body{
+body {
   user-select: none;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
-  background: rgb(228,228,228);
-  background: linear-gradient(0deg, rgba(228,228,228,1) 0%, rgba(238,238,238,1) 52%, rgba(0,191,165,1) 100%) no-repeat center center fixed;
+  background: rgb(228, 228, 228);
+  background: linear-gradient(0deg, rgba(228, 228, 228, 1) 0%, rgba(238, 238, 238, 1) 52%, rgba(0, 191, 165, 1) 100%)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10%;
+}
+
+.container-chat {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#chat {
+  width: 400px;
+  height: 100vh;
+  background: url(https://descubrecomohacerlo.com/wp-content/uploads/2020/12/fondo-predeterminado-whatsapp.jpg);
+  padding: 10px;
+}
+
+.client_message {
+  width: fit-content;
+  padding: 7px 10px 7px 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.chat-box-class{
+  border-top: 0.1em solid #b3b3b32e;
+}
+
+.chat_bloque{
+  width: 100%;
+}
+
+.chat_bloque_msg_me{
+  display: flex;
+  justify-content: end;
+}
+.chat_bloque_msg_client{
+
+}
+
+.msg_me{
+  background: #dcf8c6;
+}
+.msg_client{
+  background: #fff;
 }
