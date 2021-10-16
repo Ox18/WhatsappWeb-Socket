@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    {{> socketheader}}
+    <meta charset="UTF-8" />
+    <title>My Aplicación con Sockets</title>
+
+  </head>
+  <body>
+    <h1>My App</h1>
+    <div id="messages"></div>
+    <img id="qr" src="" alt="qr" />
+    <br />
+    <form onsubmit="return addMessage(this)">
+      <input type="text" id="username" placeholder="Tu Nombre" />
+      <input type="text" id="texto" placeholder="Cuéntanos algo..." />
+      <input type="submit" value="Enviar!" />
+    </form>
+
+  </body>
+  {{> socket}}
+</html>
