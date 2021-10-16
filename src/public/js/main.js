@@ -1,8 +1,27 @@
 var socket = io.connect("http://localhost", { forceNew: true });
 
-socket.on("messages", function (data) {
-  alert(data);
-});
+class SocketTypes {
+  static LISTENER_MESSAGES = "messages";
+  static EMIITER_MESSAGE = "messages";
+}
 
-// escuchar socket.on("key", function(data){ });
-// emitir socket.emit("key", { data: "value" });
+class SocketListener {
+  constructor() {
+    socket.on(SocketTypes.LISTENER_MESSAGES, this.messages);
+  }
+
+  messages(data) {
+    alert(data);
+  }
+}
+
+class SocketEmitter {
+  messages(data = {}) {
+    socket.emit(SocketTypes.EMIITER_MESSAGE, data);
+  }
+}
+
+const socketListener = new SocketListener();
+const socketEmitter = new SocketEmitter();
+
+socketEmitter.messages("pong");
