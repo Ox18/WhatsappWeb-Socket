@@ -1,30 +1,12 @@
+import app from "./app";
 import http from "http";
 import socketio from "socket.io";
-import { connectionSocket } from "./sockets/connection.socket";
+import sockets from "./sockets";
 
-/**
- * Initialize the server web
- */
-import app from "./app";
-
-/**
- * Initialize the server http
- */
 const server = http.createServer(app);
-
-/**
- * Initialize the server socket
- */
 const io = socketio(server);
 
-/**
- * Add on connection the socket controller
- */
-io.on("connection", connectionSocket);
+sockets(io);
 
-/**
- * Start the server
- */
-server.listen(app.get("port"), () => {
-  console.log("Server on port", app.get("port"));
-});
+server.listen(app.get("port"));
+console.log(`server on port ${app.get("port")}`);

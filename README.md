@@ -1,7 +1,15 @@
-# WhatsappWeb-Socket
-WhatsApp Web - Socket | Project to create a bot managed from WhatsApp and generated from QR scanning. This was done to help a work friend, so he can manipulate his database and keep a better management of customer service.
+# Javascript Full Stack
+is a simple chat that was built with entire javascript technologies, for the frontend, backend and database. 
 
-# How to run
+![](docs/screenshot.png)
 
-## Running in development mode
-npm start
+# Used Technologies
+- Nodejs
+  - Express
+  - Socket.io
+- Mongodb
+
+# Links and Resources used in this project
+- [Bootstrap4 CDN](http://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [Background Gradient Color](https://uigradients.com/#Lawrencium)
+- [jQuery CDN](https://code.jquery.com/)
