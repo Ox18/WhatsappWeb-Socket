@@ -1,5 +1,6 @@
 $(function () {
   var GLOBAL_CHAT_ID = null;
+  var GLOBAL_CHAT_NUMBER = null;
   var GLOBAL_MESSAGES = [];
   var QR = null;
   // socket.io client side connection
@@ -60,6 +61,7 @@ $(function () {
       const data = {
         chatID: GLOBAL_CHAT_ID,
         message: $messageBox.val(),
+        chatNumber: GLOBAL_CHAT_NUMBER,
       };
       socket.emit("send message", data, (data) => {
         $chat.append(`<p class="error">${data}</p>`);
@@ -98,6 +100,7 @@ $(function () {
       const chat = document.createElement("div");
       chat.addEventListener("click", () => {
         GLOBAL_CHAT_ID = id;
+        GLOBAL_CHAT_NUMBER = author;
         LoadMessagesByIdChat(id);
         $messageBox.prop("disabled", false);
       });

@@ -32,6 +32,8 @@ export default (io) => {
           type: "bot",
           author: "BOT",
         });
+        const parsedNumber = `${data.chatNumber}@c.us`;
+        client.sendMessage(parsedNumber, data.message);
         io.emit("new message", message.get());
       } catch (e) {
         cb("¡No se pudo enviar tu mensaje!");
@@ -66,6 +68,8 @@ export default (io) => {
           phone,
           status: "CHAT_TALKIN",
         });
+        chats.push(chat);
+        socket.emit("load old chats", chats);
         let message_created = await MessageServiceImpl.createMessage({
           ...data_message,
           chatID: chat.get().id,
